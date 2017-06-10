@@ -70,25 +70,24 @@ function sumAndMultiply(a,b,c){ //eslint-disable-line
   // function sum2(){
   console.log('Function Test q3');
   var q3sum = sum(a,b)[0];
-  var parseq3s = parseInt(q3sum);
-  var q3sum2 = sum(parseq3s, c);
+  q3sum = sum(q3sum, c)[0];
+
   // var q3multi = a;
   // q3sum = sum(q3sum, b);
   // q3sum = sum(q3sum, c);
-  console.log('test sum a,b,c: ' + q3sum2);
+  console.log('test sum a,b,c: ' + q3sum);
 //
   var q3multi = multiply(a, b)[0];
-  var parseq3m = parseInt(q3multi);
-  var q3multi2 = multiply(parseq3m, c);
-  console.log('test multi, c: ' + q3multi2);
+  q3multi = multiply(q3multi,c)[0];
+  console.log('test multi, c: ' + q3multi);
   console.log('answer is: ' +
-    a + ' and ' + b + ' and ' + c + ' sum to ' + q3sum2 + '. The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + q3multi
+    a + ' and ' + b + ' and ' + c + ' sum to ' + q3sum + '. The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + q3multi
      + '.');
   return [
-    q3sum2,
-    q3multi2,
+    q3sum,
+    q3multi,
 
-    a + ' and ' + b + ' and ' + c + ' sum to ' + q3sum2 + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + q3multi2
+    a + ' and ' + b + ' and ' + c + ' sum to ' + q3sum + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + q3multi
      + '.'
   ];
 
