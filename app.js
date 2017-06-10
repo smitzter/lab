@@ -14,14 +14,16 @@ function sum(a,b){ //eslint-disable-line
   console.log('function test of q1');
   var sum = a + b;
   return [
-    sum,
-    'The sum of ' + a + ' and ' + b + ' is ' + sum + '.'
+
+    sum, 'The sum of ' + a + ' and ' + b + ' is ' + sum + '.'
   ];
 }
-
+// return [
+//   sum,
+//   'The sum of ' + a + ' and ' + b + ' is ' + sum + '.'
+// ];
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
-
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 //////////////////////////////////////
 //no functions outside of functions
@@ -65,13 +67,36 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
+  // function sum2(){
+  console.log('Function Test q3');
+  var q3sum = sum(a,b)[0];
+  q3sum = sum(q3sum, c)[0];
+
+  // var q3multi = a;
+  // q3sum = sum(q3sum, b);
+  // q3sum = sum(q3sum, c);
+  console.log('test sum a,b,c: ' + q3sum);
+//
+  var q3multi = multiply(a, b)[0];
+  q3multi = multiply(q3multi,c)[0];
+  console.log('test multi, c: ' + q3multi);
+  console.log('answer is: ' +
+    a + ' and ' + b + ' and ' + c + ' sum to ' + q3sum + '. The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + q3multi
+     + '.');
+  return [
+    q3sum,
+    q3multi,
+
+    a + ' and ' + b + ' and ' + c + ' sum to ' + q3sum + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + q3multi
+     + '.'
+  ];
 
 }
-
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
+
 
 /////////////////////////////////////
 /* Problem 4
@@ -114,4 +139,4 @@ function multiplyArray(testArray){ //eslint-disable-line
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(2,3,4);
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
+// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.//
