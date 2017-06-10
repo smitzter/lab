@@ -13,14 +13,17 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a,b){ //eslint-disable-line
   console.log('function test of q1');
   var sum = a + b;
-  return sum;
+  return [
+
+    sum, 'The sum of ' + a + ' and ' + b + ' is ' + sum + '.'
+  ];
 }
 // return [
 //   sum,
 //   'The sum of ' + a + ' and ' + b + ' is ' + sum + '.'
 // ];
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 //////////////////////////////////////
 //no functions outside of functions
@@ -66,23 +69,27 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a,b,c){ //eslint-disable-line
   // function sum2(){
   console.log('Function Test q3');
-  var i = parseInt(sum(a,b));
-  console.log('function test i');
-  var sum2 = sum(i,c);
-  console.log('sum2: ' + sum2);
-  // }
-  // return sum2;
-  // function multi2(){
-  console.log('test sum a,b,c: ' + sum2);
-  var multi1 = parseInt(multiply(a,b));
-  console.log(' test mult a,b: ' + multi1);
-  var multi2 = parseInt(multiply(multi1, c));
-  console.log('test multi1, c: ' + multi2);
-  // }
+  var q3sum = sum(a,b)[0];
+  var parseq3s = parseInt(q3sum);
+  var q3sum2 = sum(parseq3s, c);
+  // var q3multi = a;
+  // q3sum = sum(q3sum, b);
+  // q3sum = sum(q3sum, c);
+  console.log('test sum a,b,c: ' + q3sum2);
+//
+  var q3multi = multiply(a, b)[0];
+  var parseq3m = parseInt(q3multi);
+  var q3multi2 = multiply(parseq3m, c);
+  console.log('test multi, c: ' + q3multi2);
+  console.log('answer is: ' +
+    a + ' and ' + b + ' and ' + c + ' sum to ' + q3sum2 + '. The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + q3multi
+     + '.');
   return [
-    sum2,
-    multi2,
-    a + ' and ' + b + ' and ' + c + ' sum to ' + sum2 + '. The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multi2 + '.'
+    q3sum2,
+    q3multi2,
+
+    a + ' and ' + b + ' and ' + c + ' sum to ' + q3sum2 + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + q3multi2
+     + '.'
   ];
 
 }
