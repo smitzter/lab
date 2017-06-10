@@ -11,6 +11,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 
 function sum(a,b){ //eslint-disable-line
+  console.log('function test of q1');
   var sum = a + b;
   return [
     sum,
@@ -38,6 +39,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a,b){ //eslint-disable-line
+  console.log('function test of q2');
   var multiply = a * b;
   return [
     multiply,
