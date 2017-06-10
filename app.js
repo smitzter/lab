@@ -137,10 +137,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-
+  console.log('Function Test q5');
+  var q5multi = multiply(2,3)[0];
+  q5multi = multiply(q5multi,4)[0];
+  console.log('test multi, c: ' + q5multi);
+  console.log(testArray + ' was passed in as an array of numbers, and ' + q5multi + ' is their sum.');
+  return [
+    q5multi,
+    'The numbers ' + testArray + ' have a product of ' + q5multi + '.'
+  ];
+//"The numbers 2,3,4 have a product of 24."
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.//
