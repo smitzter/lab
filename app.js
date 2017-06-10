@@ -72,11 +72,7 @@ function sumAndMultiply(a,b,c){ //eslint-disable-line
   var q3sum = sum(a,b)[0];
   q3sum = sum(q3sum, c)[0];
 
-  // var q3multi = a;
-  // q3sum = sum(q3sum, b);
-  // q3sum = sum(q3sum, c);
   console.log('test sum a,b,c: ' + q3sum);
-//
   var q3multi = multiply(a, b)[0];
   q3multi = multiply(q3multi,c)[0];
   console.log('test multi, c: ' + q3multi);
@@ -112,12 +108,20 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-
+  console.log('Function Test q4');
+  var q4sum = sum(2,3)[0];
+  q4sum = sum(q4sum, 4)[0];
+  console.log('test sum a,b,c: ' + q4sum);
+  console.log(testArray + ' was passed in as an array of numbers, and ' + q4sum + ' is their sum.');
+  return [
+    q4sum,
+    testArray + ' was passed in as an array of numbers, and ' + q4sum + ' is their sum.'
+  ];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
